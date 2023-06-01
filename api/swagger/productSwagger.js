@@ -96,7 +96,7 @@
  *     summary: Create a product
  *     tags: [Product]
  *     security:
- *       - BearerAuth: []
+ *       - bearerAuth: [] 
  *     requestBody:
  *       required: true
  *       content:

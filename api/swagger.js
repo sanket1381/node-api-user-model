@@ -14,16 +14,18 @@ const swaggerOptions = {
 				url: 'http://localhost:3005/'
 			}
 		],
-		securityDefinitions: {
-			bearerAuth: {
-				type: 'apiKey',
-				name: 'Authorization',
-				in: 'header',
-				description:
-					'Enter your bearer token in the format **Bearer &lt;token>**',
-				example: 'Bearer adsdsadas'
+		components: {
+			securitySchemes: {
+				bearerAuth: {
+					type: 'http',
+					scheme: 'bearer',
+					bearerFormat: 'JWT'
+				}
 			}
 		},
+		security: [{
+			bearerAuth: []
+		}]
 	},
 	apis: ['api/routes.js', 'api/routes/*.js', 'api/swagger/*.js'],
 };

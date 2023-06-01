@@ -122,7 +122,7 @@ userController.signUp = async function (req, res, callback) {
 	}
 	insertObj.status = 1;
 
-	// call userService to handle login request
+	// call userService to handle sign up request
 	// commonFunc is function created inside commonjs file used to send response either success or error
 	try {
 		let signUpResponse = await userService.signup(req, insertObj);

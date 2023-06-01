@@ -103,17 +103,6 @@
  *           type: string
  */
 
-/**
- * @swagger
- * definitions:
- *  ValidateErrorResponse:
- *    type: object
- *    properties:
- *      errors:
- *        type: array
- *        items:
- *            $ref: "#/definitions/UserResponse"
- */
 
 /**
  * @swagger
@@ -184,19 +173,12 @@
  *            $ref: "#/definitions/ErrorResponse"
  *       422:
  *         description: Validate Error
- *         schema:
- *            $ref: "#/definitions/ValidateErrorResponse"
+ *         
  *       500:
  *         description: Error
  *         schema:
  *            $ref: "#/definitions/ErrorResponse"
  */
-
-
-
-
-
-
 
 /**
  * @swagger
@@ -225,40 +207,40 @@
 
 
 
-/**
- * @swagger
- * /api/user/{id}:
- *   get:
- *     summary: get user detiails by Id
- *     tags: [User Registration]
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         description: User ID
- *         schema:
- *           type: string
- *     requestBody:
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/api/models/userModel'
- *     security:
- *       - BearerAuth: []
- *     responses:
- *       200:
- *         description: Successful operation
- *         content:
- *           application/json:
- *             schema:
- *             $ref: '#/api/models/userModel'
- *       400:
- *         description: Bad request
- *       503:
- *         description: Service unavailable
- * securitySchemes:
- *   BearerAuth:
- *     type: http
- *     scheme: bearer
- *     bearerFormat: JWT
- */
+// /**
+//  * @swagger
+//  * /api/user/{id}:
+//  *   get:
+//  *     summary: get user detiails by Id
+//  *     tags: [User Registration]
+//  *     parameters:
+//  *       - in: path
+//  *         name: id
+//  *         required: true
+//  *         description: User ID
+//  *         schema:
+//  *           type: string
+//  *     requestBody:
+//  *       content:
+//  *         application/json:
+//  *           schema:
+//  *             $ref: '#/api/models/userModel'
+//  *     security:
+//  *       - BearerAuth: []
+//  *     responses:
+//  *       200:
+//  *         description: Successful operation
+//  *         content:
+//  *           application/json:
+//  *             schema:
+//  *             $ref: '#/api/models/userModel'
+//  *       400:
+//  *         description: Bad request
+//  *       503:
+//  *         description: Service unavailable
+//  * securitySchemes:
+//  *   BearerAuth:
+//  *     type: http
+//  *     scheme: bearer
+//  *     bearerFormat: JWT
+//  */

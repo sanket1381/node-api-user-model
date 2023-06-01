@@ -2,8 +2,10 @@ const dotenv = require('dotenv');
 const path = require('path');
 const Joi = require('@hapi/joi');
 
+// This function call loads the environment variables from a file and sets them in the current process's environment
 dotenv.config({ path: path.join(__dirname, '../.env') });
 
+// to validate the structure and values of an object.
 const envVarsSchema = Joi.object()
   .keys({
     NODE_ENV: Joi.string().valid('production', 'development', 'test').required(),
